@@ -1,0 +1,370 @@
+{
+  "step_seconds": 0.016666666666666666,
+  "screen": {
+    "width": 390,
+    "height": 700,
+    "dead_zone": 12,
+    "floor_tile": 48
+  },
+  "hero": {
+    "speed": 120,
+    "hp": 100,
+    "radius": 12,
+    "magnet_radius": 60
+  },
+  "weapons": {
+    "max_owned": 3,
+    "max_level": 5,
+    "spark": {
+      "speed": 400,
+      "damage": 10,
+      "interval": 0.8,
+      "count": 1,
+      "damage_per_level": 3,
+      "interval_reduction": 0.08,
+      "extra_spark_levels": [
+        3,
+        5
+      ],
+      "radius": 4,
+      "lifetime": 3
+    },
+    "blades": {
+      "radius": 60,
+      "period": 1.5,
+      "hit_interval": 0.5,
+      "count": 2,
+      "damage": 8,
+      "damage_per_level": 3,
+      "extra_blade_levels": [
+        2,
+        4
+      ],
+      "hit_radius": 12
+    },
+    "ring": {
+      "interval": 0.5,
+      "damage": 5,
+      "radius": 50,
+      "damage_per_level": 2,
+      "radius_per_level": 10
+    }
+  },
+  "passives": {
+    "max_level": 5,
+    "boots_speed_bonus": 0.1,
+    "heart_hp": 20,
+    "heart_heal": 20,
+    "magnet_radius": 30
+  },
+  "enemies": {
+    "bat": {
+      "hp": 8,
+      "speed": 100,
+      "damage": 5,
+      "xp": 1,
+      "radius": 10
+    },
+    "slime": {
+      "hp": 30,
+      "speed": 55,
+      "damage": 8,
+      "xp": 2,
+      "radius": 10
+    },
+    "ghost": {
+      "hp": 15,
+      "speed": 135,
+      "damage": 6,
+      "xp": 2,
+      "radius": 10
+    },
+    "demon": {
+      "hp": 800,
+      "speed": 85,
+      "damage": 20,
+      "xp": 0,
+      "draw_scale": 2,
+      "radius": 20
+    }
+  },
+  "contact_interval": 0.5,
+  "spawn": {
+    "interval": 1,
+    "per_tick": 8,
+    "radius": 380,
+    "remove_radius": 700,
+    "boss_return_radius": 600,
+    "max_alive": 120
+  },
+  "waves": [
+    {
+      "from": 0,
+      "types": [
+        "bat"
+      ],
+      "minimum": 12
+    },
+    {
+      "from": 15,
+      "types": [
+        "bat"
+      ],
+      "minimum": 20
+    },
+    {
+      "from": 30,
+      "types": [
+        "bat",
+        "slime"
+      ],
+      "minimum": 28
+    },
+    {
+      "from": 45,
+      "types": [
+        "slime",
+        "ghost"
+      ],
+      "minimum": 36
+    },
+    {
+      "from": 60,
+      "types": [
+        "bat",
+        "ghost"
+      ],
+      "minimum": 45
+    },
+    {
+      "from": 75,
+      "types": [
+        "bat",
+        "slime",
+        "ghost"
+      ],
+      "minimum": 55
+    },
+    {
+      "from": 90,
+      "types": [
+        "bat",
+        "slime"
+      ],
+      "minimum": 55,
+      "boss": "demon"
+    },
+    {
+      "from": 105,
+      "types": [
+        "bat"
+      ],
+      "minimum": 75
+    }
+  ],
+  "growth": {
+    "gem_speed": 300,
+    "initial_xp": 5,
+    "xp_increment": 3,
+    "cards": 3,
+    "fallback_heal": 30
+  },
+  "victory_seconds": 120,
+  "art": {
+    "scale": 3,
+    "gems": {
+      "gem_blue": [
+        [
+          15,
+          65,
+          210
+        ],
+        [
+          45,
+          175,
+          255
+        ],
+        [
+          220,
+          250,
+          255
+        ]
+      ],
+      "gem_pink": [
+        [
+          150,
+          20,
+          140
+        ],
+        [
+          255,
+          85,
+          210
+        ],
+        [
+          255,
+          235,
+          255
+        ]
+      ]
+    }
+  },
+  "sound": {
+    "sample_rate": 22050,
+    "amplitude": 0.35,
+    "volume": 0.5,
+    "notes": {
+      "hit": [
+        [
+          220,
+          0.06
+        ]
+      ],
+      "gem": [
+        [
+          1100,
+          0.07
+        ]
+      ],
+      "level_up": [
+        [
+          660,
+          0.1
+        ],
+        [
+          880,
+          0.1
+        ],
+        [
+          1320,
+          0.18
+        ]
+      ],
+      "hurt": [
+        [
+          130,
+          0.12
+        ],
+        [
+          85,
+          0.1
+        ]
+      ],
+      "end": [
+        [
+          440,
+          0.16
+        ],
+        [
+          330,
+          0.16
+        ],
+        [
+          220,
+          0.25
+        ]
+      ],
+      "death": [
+        [
+          700,
+          0.04
+        ],
+        [
+          1050,
+          0.035
+        ],
+        [
+          350,
+          0.06
+        ]
+      ],
+      "bounce": [
+        [
+          180,
+          0.025
+        ],
+        [
+          260,
+          0.025
+        ],
+        [
+          390,
+          0.025
+        ],
+        [
+          580,
+          0.04
+        ],
+        [
+          300,
+          0.06
+        ]
+      ],
+      "upgrade": [
+        [
+          520,
+          0.06
+        ],
+        [
+          780,
+          0.06
+        ],
+        [
+          1040,
+          0.07
+        ],
+        [
+          1560,
+          0.1
+        ]
+      ]
+    },
+    "cooldowns": {
+      "hit": 0.08,
+      "gem": 0.06,
+      "death": 0.1,
+      "bounce": 0.18,
+      "hurt": 0.12,
+      "upgrade": 0.1,
+      "level_up": 0.1,
+      "end": 0.1
+    },
+    "volumes": {
+      "bounce": 0.22,
+      "death": 0.3,
+      "upgrade": 0.4,
+      "voice_level": 0.65,
+      "voice_hurt": 0.65,
+      "voice_win": 0.65,
+      "voice_lose": 0.65
+    },
+    "speech": {
+      "voice_level": "Level up! Time to get ridiculous.",
+      "voice_hurt": "Ouch! That was rude.",
+      "voice_win": "You survived! The night needs a vacation.",
+      "voice_lose": "Oops! Let us pretend that was practice."
+    },
+    "speech_rate": 185,
+    "voice_cooldown": 8
+  },
+  "feel": {
+    "number_seconds": 0.65,
+    "number_rise_speed": 35,
+    "flash_seconds": 0.15,
+    "flash_radius": 24,
+    "shake_seconds": 0.18,
+    "shake_pixels": 4
+  },
+  "physics": {
+    "enabled": true,
+    "iterations": 2,
+    "strength": 0.8,
+    "slop": 0.1,
+    "hit_impulse": 260,
+    "max_push_speed": 420,
+    "drag": 7,
+    "restitution": 0.25,
+    "hero_impulse": 100,
+    "bounce_sound_threshold": 70
+  }
+}
